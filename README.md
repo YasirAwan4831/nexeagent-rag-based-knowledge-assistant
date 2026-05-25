@@ -1,116 +1,247 @@
-# 🚀 NEXE.AGENT AI Knowledge Assistant
+# NEXEAGENT RAG Knowledge Assistant
 
-<div align="center">
+A production-style **Retrieval-Augmented Generation (RAG)** application — **ChatGPT for Company Documents**.
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=28&pause=1000&color=00C2FF&center=true&vCenter=true&width=900&lines=Production-Style+RAG+AI+Knowledge+Assistant;ChatGPT+for+Company+Documents;Powered+by+Python+%2B+React+%2B+Gemini+AI;Vector+Search+%7C+Embeddings+%7C+RAG+Pipeline" alt="Typing SVG" />
-
-<br><br>
-
-![Python](https://img.shields.io/badge/Python-3.11+-blue?style=for-the-badge\&logo=python)
-![React](https://img.shields.io/badge/React-Frontend-61DAFB?style=for-the-badge\&logo=react)
-![FastAPI](https://img.shields.io/badge/FastAPI-Backend-009688?style=for-the-badge\&logo=fastapi)
-![Gemini AI](https://img.shields.io/badge/Gemini-AI-orange?style=for-the-badge\&logo=google)
-![RAG](https://img.shields.io/badge/RAG-Pipeline-purple?style=for-the-badge)
-![Vector DB](https://img.shields.io/badge/Vector-Database-red?style=for-the-badge)
-![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
-
-</div>
+Built as part of the **AI & Automation Internship** at [NEXE.AGENT](https://nexe.agent).
 
 ---
 
-# 📚 AI Knowledge Assistant
+## Features
 
-A **production-style RAG-based AI Knowledge Assistant** developed during the AI & Automation Internship at NEXE.AGENT.
-
-This project is designed as a complete **AI-powered web application** that allows companies to upload internal documents and interact with them using natural language queries — similar to **“ChatGPT for Company Documents.”**
-
-The system intelligently processes uploaded files, generates embeddings, stores contextual knowledge in a vector database, and delivers highly relevant AI-powered responses using **Google Gemini AI** and **Retrieval-Augmented Generation (RAG)**.
-
----
-
-# ✨ Features
-
-## 🤖 AI-Powered Document Chat
-
-* Ask questions from uploaded company documents
-* Context-aware intelligent responses
-* Semantic search with embeddings
-* Gemini AI integration
-
-## 📂 Smart File Upload System
-
-* Upload PDF, DOCX, TXT files
-* Automatic document processing
-* Text chunking & indexing
-* Embedding generation pipeline
-
-## ⚡ RAG Pipeline
-
-* Retrieval-Augmented Generation architecture
-* Vector similarity search
-* Context injection into prompts
-* Accurate company-specific responses
-
-## 🎨 Modern Frontend
-
-* Beautiful React chat interface
-* Real-time messaging UI
-* Responsive design
-* Drag & drop file upload
-
-## 🔒 Backend Architecture
-
-* Python FastAPI backend
-* REST APIs
-* AI orchestration layer
-* Embedding management
-* Vector database integration
+- **Document Upload** — PDF, TXT, DOCX support with drag & drop
+- **RAG Pipeline** — Text extraction → chunking → Gemini embeddings → ChromaDB storage
+- **AI Chat** — Context-aware answers powered by Google Gemini
+- **Document Management** — View, index, and delete company documents
+- **Chat History** — Persistent session-based conversations
+- **Modern Dashboard** — React UI with dark mode, animations, and responsive layout
 
 ---
 
-# 🏗️ System Architecture
+## Tech Stack
 
-```mermaid
-flowchart LR
+| Layer | Technology |
+|-------|------------|
+| Frontend | React, Vite, Tailwind CSS, Framer Motion, Lucide React |
+| Backend | Python, FastAPI, Uvicorn |
+| AI | Google Gemini API (chat + embeddings) |
+| Vector DB | ChromaDB |
+| Storage | Local files + JSON metadata |
 
-A[📄 Company Documents] --> B[Document Processing]
-B --> C[Text Chunking]
-C --> D[Embedding Generation]
-D --> E[(Vector Database)]
+---
 
-F[👤 User Query] --> G[Semantic Search]
-G --> E
-E --> H[Relevant Context Retrieval]
-H --> I[Gemini AI]
-I --> J[🤖 Intelligent Response]
+## Project Structure
+
+```
+nexeagent-rag-knowledge-assistant/
+├── backend/
+│   ├── app/
+│   │   ├── api/routes/       # REST API endpoints
+│   │   ├── services/         # RAG, Gemini, embeddings, vector store
+│   │   ├── models/           # Pydantic schemas
+│   │   └── utils/            # Chunking, logging, file utils
+│   ├── data/                 # Uploads, ChromaDB, metadata, chat history
+│   ├── tests/
+│   ├── requirements.txt
+│   └── run.py
+├── frontend/
+│   └── src/
+│       ├── components/
+│       ├── pages/
+│       ├── services/
+│       └── context/
+├── API.md
+└── README.md
 ```
 
 ---
 
-# 👨‍💻 Developed During Internship
+## Quick Start
 
-Developed By Muhammad Yasir as part of the **AI & Automation Internship** at NEXE.AGENT.
+### Prerequisites
+
+- Python 3.11+
+- Node.js 18+
+- [Google Gemini API Key](https://aistudio.google.com/apikey)
+
+### 1. Backend Setup
+
+```bash
+cd backend
+python -m venv venv
+
+# Windows
+venv\Scripts\activate
+
+# macOS/Linux
+source venv/bin/activate
+
+pip install -r requirements.txt
+copy .env.example .env   # Windows
+# cp .env.example .env   # macOS/Linux
+```
+
+Edit `backend/.env` and set your API key:
+
+```env
+GEMINI_API_KEY=your_actual_api_key_here
+GEMINI_MODEL=gemini-2.0-flash
+```
+
+Start the backend:
+
+```bash
+python run.py
+```
+
+API runs at **http://localhost:8000** — Docs at **http://localhost:8000/docs**
+
+### 2. Frontend Setup
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+Frontend runs at **http://localhost:5173**
+
+### 3. Test the RAG Pipeline
+
+1. Open **http://localhost:5173**
+2. Go to **Upload** and upload `backend/sample_docs/company_policy.txt`
+3. Go to **Chat** and ask: *"What is the refund policy?"*
+4. The AI should answer using your uploaded document context
 
 ---
 
-# 🌟 Project Vision
+## Environment Variables
 
-This project demonstrates how modern AI systems can transform traditional company documentation into an intelligent conversational knowledge system powered by:
-
-* RAG Architecture
-* Semantic Search
-* Vector Databases
-* Large Language Models
-* AI Automation
+| Variable | Description | Default |
+|----------|-------------|---------|
+| `GEMINI_API_KEY` | Google Gemini API key | — |
+| `GEMINI_MODEL` | Chat model | `gemini-2.0-flash` |
+| `GEMINI_EMBEDDING_MODEL` | Embedding model | `models/text-embedding-004` |
+| `CHUNK_SIZE` | Text chunk size | `800` |
+| `CHUNK_OVERLAP` | Chunk overlap | `150` |
+| `TOP_K_RESULTS` | Retrieval count | `5` |
+| `PORT` | Server port | `8000` |
 
 ---
 
-<div align="center">
+## Running Tests
 
-# ⭐ If you like this project, give it a star!
+```bash
+cd backend
+# Activate venv first
+pip install -r requirements.txt
+pytest tests/ -v
+```
 
-<img src="https://media.giphy.com/media/QssGEmpkyEOhBCb7e1/giphy.gif" width="120"/>
+---
 
-### Built with ❤️ using Python, React & Gemini AI
+## RAG Workflow
 
-</div>
+```
+Upload → Extract Text → Chunk → Embed (Gemini) → Store (ChromaDB)
+                                                      ↓
+User Query → Embed Query → Similarity Search → Context → Gemini → Answer
+```
+
+---
+
+## API Documentation
+
+See [API.md](./API.md) for full endpoint reference.
+
+---
+
+## License
+
+MIT License — Developed by Muhammad Yasir for NEXE.AGENT Internship.
+
+---
+
+**فولڈر سٹرکچر — مکمل**
+
+```
+nexeagent-rag-knowledge-assistant/
+├── API.md
+├── README.md
+├── .env
+├── backend/
+│   ├── .env
+│   ├── pytest.ini
+│   ├── requirements.txt
+│   ├── run.py
+│   ├── app/
+│   │   ├── __init__.py
+│   │   ├── config.py
+│   │   ├── main.py
+│   │   ├── api/
+│   │   │   ├── __init__.py
+│   │   │   └── routes/
+│   │   │       ├── __init__.py
+│   │   │       ├── chat.py
+│   │   │       ├── documents.py
+│   │   │       ├── health.py
+│   │   │       └── upload.py
+│   │   ├── models/
+│   │   │   ├── __init__.py
+│   │   │   └── schemas.py
+│   │   ├── services/
+│   │   │   ├── __init__.py
+│   │   │   ├── embedding_service.py
+│   │   │   ├── gemini_service.py
+│   │   │   ├── pdf_service.py
+│   │   │   ├── query_service.py
+│   │   │   ├── rag_service.py
+│   │   │   ├── retrieval_service.py
+│   │   │   └── vector_store_service.py
+│   │   └── utils/
+│   │       ├── __init__.py
+│   │       ├── chunking.py
+│   │       ├── file_utils.py
+│   │       └── logger.py
+│   ├── data/
+│   │   ├── chat_history/
+│   │   ├── chroma/
+│   │   │   └── chroma.sqlite3
+│   │   ├── metadata/
+│   │   └── uploads/
+│   ├── logs/
+│   ├── sample_docs/
+│   │   └── company_policy.txt
+│   └── tests/
+│       ├── test_api.py
+│       └── test_chunking.py
+├── frontend/
+│   ├── index.html
+│   ├── package.json
+│   ├── postcss.config.js
+│   ├── tailwind.config.js
+│   ├── vite.config.js
+│   ├── public/
+│   └── src/
+│       ├── App.jsx
+│       ├── index.css
+│       ├── main.jsx
+│       ├── components/
+│       │   ├── ChatMessage.jsx
+│       │   ├── FileUpload.jsx
+│       │   ├── Layout.jsx
+│       │   ├── LoadingSpinner.jsx
+│       │   ├── Sidebar.jsx
+│       │   ├── StatCard.jsx
+│       │   └── TypingIndicator.jsx
+│       ├── context/
+│       │   └── ThemeContext.jsx
+│       ├── pages/
+│       │   ├── Chat.jsx
+│       │   ├── Documents.jsx
+│       │   ├── Home.jsx
+│       │   ├── Settings.jsx
+│       │   └── Upload.jsx
+│       └── services/
+│           └── api.js
+└── (دیگر فائلیں/فولڈرز یہاں شامل نہیں کیے گئے: node_modules, dist, .pytest_cache, __pycache__ وغیرہ)
+```

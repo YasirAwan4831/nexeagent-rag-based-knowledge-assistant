@@ -1,0 +1,29 @@
+NEXE.AGENT COMPANY KNOWLEDGE BASE - SAMPLE DOCUMENT
+
+Company Name: NEXE.AGENT
+Founded: 2024
+Industry: AI & Automation
+
+REFUND POLICY:
+Customers may request a full refund within 14 days of purchase for all SaaS subscriptions.
+Enterprise plans require written approval from the account manager.
+Refunds are processed within 5-7 business days.
+
+REMOTE WORK POLICY:
+All employees are eligible for hybrid remote work (3 days remote, 2 days office).
+Full remote work is available for senior engineers with manager approval.
+Core collaboration hours are 10:00 AM - 3:00 PM EST.
+
+DATA SECURITY:
+All company data must be encrypted at rest and in transit.
+API keys must never be committed to version control.
+Employees must complete annual security training.
+
+SUPPORT HOURS:
+Standard support: Monday-Friday, 9 AM - 6 PM EST
+Enterprise support: 24/7 with 2-hour SLA response time
+
+CONTACT:
+General inquiries: hello@nexe.agent
+Support: support@nexe.agent
+Careers: careers@nexe.agent

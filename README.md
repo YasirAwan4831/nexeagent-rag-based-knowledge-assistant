@@ -17,6 +17,7 @@
 
 <br/>
 
+
 <!-- BADGES ROW 1 -->
 [![Python](https://img.shields.io/badge/Python-3.11+-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://python.org)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.110+-009688?style=for-the-badge&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com)
@@ -940,7 +941,11 @@ See the full [LICENSE](./LICENSE) file for details.
 
 **⭐ If this project helped you, please consider giving it a star!**
 
-------------
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=120&section=footer&text=Developed%20%20By%20Muhammad Yasir at Nexe-Adent&fontSize=20&fontColor=ffffff&animation=fadeIn" width="100%"/>
+<img 
+  src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=120&section=footer&text=Developed%20By%20Muhammad%20Yasir%20at%20NEXE-AGENT&fontSize=22&fontColor=ffffff&animation=fadeIn" 
+  width="100%"
+/>
+
+</div>

@@ -2,14 +2,18 @@
 
 <!-- ANIMATED SVG BANNER -->
 <img 
-  src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=220&section=header&text=NEXE-AGENT%20RAG%20Knowledge%20Assistant&fontSize=42&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Muhammad Yasir%20%20||%20%20AI%20AUTOMATION%20INTERN%20%20|| NEXE%20AGENT&descAlignY=65&descSize=22&descColor=d1d5db" 
+  src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=220&section=header&text=NEXE-AGENT%20RAG%20Knowledge%20Assistant&fontSize=42&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Muhammad%20Yasir%20-%20AI%20AUTOMATION%20INTERN%20-%20NEXE%20AGENT&descAlignY=65&descSize=22&descColor=d1d5db" 
   width="100%"
 />
 
 <!-- TYPING ANIMATION -->
 <a href="https://git.io/typing-svg">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=6366F1&center=true&vCenter=true&multiline=true&repeat=true&width=700&height=80&lines=🤖+AI+for+Your+Company+Documents;📄+Upload+→+Embed+→+Retrieve+→+Answer;⚡+Powered+by+Google+Gemini+%2B+ChromaDB" alt="Typing SVG" />
+  <img 
+    src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=6366F1&center=true&vCenter=true&multiline=true&repeat=true&width=700&height=80&lines=AI+for+Your+Company+Documents;Upload+-+Embed+-+Retrieve+-+Answer;Powered+by+Google+Gemini+and+ChromaDB" 
+    alt="Typing SVG" 
+  />
 </a>
+
 
 <br/>
 
@@ -423,8 +427,11 @@ python run.py
 ```
 
 > ✅ API running at **http://localhost:8000**
+
 > 📚 Swagger docs at **http://localhost:8000/docs**
+
 > 📖 ReDoc at **http://localhost:8000/redoc**
+
 
 ---
 
